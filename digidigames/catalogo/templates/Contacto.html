@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% load static %}
+        <div class= "caja2"> 
+
+            <h1>¿ Necesitas Ayuda ? ¡ Aqui Puedes Contactanos A través de este formulario !</h1>
+        </div>
+
+                    <div id="cajaform">
+
+                        <div>
+                            <p>llena este formulario, envianos tus preguntas y recibirás una respuesta en tu correo electrónico lo mas pronto posible!</p>
+                        </div>
+                        <form id="mi-formulario" action="Contacto.html">
+
+                            <label>Nombre Completo: </label>
+                            <input type="text" name="nombre" minlength="6" placeholder="nombre" required>
+
+                            <label>Correo Electrónico: </label>
+                            <input type="text" name="email" placeholder="correo@dominio.com" required>
+
+                            <label>Reingrese su correo electrónico: </label>
+                            <input type="text" name="email2" placeholder="correo@dominio.com" required>
+
+                            <label>Telefono: </label>
+                            <input type="text" name="fono" minlength="9" required>
+
+                            <label>Consulta: </label>
+                            <textarea name="consulta" rows="5" cols="50" required></textarea>
+
+                            <button>Enviar</button>
+                        </form> 
+                    </div>
+    </body>
+    {%endblock%}
+</html>

@@ -1,6 +1,7 @@
 {% extends "base_generic.html" %}
 {% block content %}
 {% load static %}
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -29,28 +30,29 @@
   </div>
   
 <div class= "caja2">
+
     <h1>Ofertas De La Semana</h1>
 
 </div>
-{% load static %}
+
 <div class= "fila" >
-    <div class= "columnas"><a href="Pago.html" target="_Blank" class = "Games"><img src="{% static 'IMG/1.jpg' %}" alt="Imagen1"></a></div>
-    <div class= "columnas"><a href="Pago.html" target="_Blank" class = "Games"><img src="{% static 'IMG/2.jpg' %}" alt="Imagen2"></a></div>
+    <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"><img src="{% static 'IMG/1.jpg' %}" alt="Imagen1"></a></div>
+    <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"><img src="{% static 'IMG/2.jpg' %}" alt="Imagen2"></a></div>
     
 <br>
 
 </div>
 <div class= "fila" >   
-    <div class= "columnas"><a href="Pago.html" target="_Blank" class = "Games"><img src="{% static 'IMG/3.jpg' %}" alt="Imagen3"></a></div>
-    <div class= "columnas"><a href="Pago.html" target="_Blank" class = "Games"><img src="{% static 'IMG/4.jpg' %}" alt="Imagen4"></a></div>
+    <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"><img src="{% static 'IMG/3.jpg' %}" alt="Imagen3"></a></div>
+    <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"><img src="{% static 'IMG/4.jpg' %}" alt="Imagen4"></a></div>
 <br>
 
 </div>
-<div class= "fila" >
-    <div class= "columnas"><a href="Pago.html" target="_Blank" class = "Games"><img src="{% static 'IMG/5.jpg' %}" alt="Imagen5"></a></div>
-    <div class= "columnas"><a href="Pago.html" target="_Blank" class = "Games"><img src="{% static 'IMG/6.jpg' %}" alt="Imagen6" ></a></div>
 
-
+    <div class= "fila" >
+    <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"><img src="{% static 'IMG/5.jpg' %}" alt="Imagen5"></a></div>
+    <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"><img src="{% static 'IMG/6.jpg' %}" alt="Imagen6" ></a></div>
+    </div>
 <br>
 
 <div class= "caja2">

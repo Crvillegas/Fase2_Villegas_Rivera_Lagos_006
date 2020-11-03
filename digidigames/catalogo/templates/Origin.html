@@ -1,0 +1,32 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% load static %}
+<br>
+        
+        <div class= "caja2">
+            <h1>Origin</h1>
+
+        </div>
+
+        <div class= "fila" >
+            <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"> <img src="{% static 'IMGORIGIN/g1.jpg' %}" alt="Imagen1"></a></div>
+            <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"> <img src="{% static 'IMGORIGIN/g2.jpg' %}" alt="Imagen2"></a></div>
+        <br>
+        </div>
+
+
+        <div class= "fila" >
+            <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"> <img src="{% static 'IMGORIGIN/g3.jpg' %}" alt="Imagen3"></a></div>
+            <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"> <img src="{% static 'IMGORIGIN/g4.jpg' %}" alt="Imagen4"></a></div>
+        <br>
+        </div>
+        
+
+        <div class= "fila" >
+            <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"> <img src="{% static 'IMGORIGIN/g5.jpg' %}" alt="Imagen5"></a></div>
+            <div class= "columnas"><a href="{%url 'Pago' %}" target="_Blank" class = "Games"> <img src="{% static 'IMGORIGIN/g6.jpg' %}" alt="Imagen6"></a></div>
+        </div>
+      
+    </body>
+    {%endblock%}
+</html>

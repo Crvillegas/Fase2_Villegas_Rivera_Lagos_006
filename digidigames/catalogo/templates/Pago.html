@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+{% block content %}
+{% load static %}
+<br>
+        <div class= "caja2"> 
+
+            <h1>¿ Necesitas Ayuda ? ¡ Aqui Puedes Contactanos A través de este formulario !</h1>
+        </div>
+
+                    <div id="pago">
+
+                        <div>
+                            <p>Estas A Un Paso De Tener el juego!</p>
+                        </div>
+                        <form id="formulario-pago" action="Pago.html">
+
+                            <label>Nombre Completo: </label>
+                            <input type="text" name="nombre" minlength="6" placeholder="nombre" required>
+
+                            <label>Correo Electrónico: </label>
+                            <input type="text" name="email" id="email" placeholder="correo@dominio.com" required>
+
+                            <label>Reingrese su correo electrónico: </label>
+                            <input type="text" name="email2" placeholder="correo@dominio.com" required  >
+
+                            <label>Metodo De Pago:</label>
+                            <select name="pago" >
+                                <option></option>
+                                    <option value="1">Visa</option>
+                                    <option value="2">Transferencia</option>
+                                    <option value="3">Deposito</option>
+                            </select>
+
+                            <label>Telefono: </label>
+                            <input type="text" name="fono" minlength="9" required>
+
+                            <label for="chkAceptar">Acepto las condiciones:</label>
+                            <input type="checkbox" id="chkAceptar" name="chkAceptar" value="S">
+
+                            <button>Enviar</button>
+
+                        </form> 
+                    </div>
+    </body>
+    {%endblock%}
+</html>
