@@ -50,17 +50,26 @@ def Pago(request) :
 
 #crud
 
+
+
+class juegoListView (generic.ListView):
+    model = juego
+    paginate_by = 10
+
+
+
+
 class juegoCreate(CreateView):
     model = juego
     fields = '__all__'
 
 class juegoUpdate(UpdateView):
     model = juego
-    fields = ['titulo', 'descipcion', 'precio', 'plataforma_status']
+    fields = ['id_juego', 'titulo', 'descipcion', 'precio', 'plataforma_status']
 
 class juegoDelete(DeleteView):
     model = juego
-    success_url = reverse_lazy ('juego')
+    success_url = reverse_lazy ('index')
 
 class juegoDetailView(generic.DetailView):
     model = juego

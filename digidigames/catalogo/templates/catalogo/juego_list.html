@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Lista De Juegos</h1>
+    {% if juego_list %}
+    <ul>
+        {%for juego in juego_list%}
+        <li>
+            <a href="{{juego.get_absolute_url}}">{{ juego.titulo }}</a> ({{juego.precio}})
+        </li>
+        {%endfor%}
+        
+    </ul>
+    {%else%}    
+    <p>No hay juegos disponibles en la pagina de momento.</p>
+    {%endif%}
+{%endblock%}

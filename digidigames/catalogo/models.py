@@ -14,6 +14,7 @@ class juego(models.Model):
         ('O','Origin'),
     )
 
+
     status = models.CharField(
         max_length=1,
         choices=plataforma_status,
@@ -22,6 +23,7 @@ class juego(models.Model):
         help_text='Plataforma del juego',
     )
 
-
-            
-
+    def get_absolute_url(self):         
+        return reverse('juego-Detail', args=[str(self.id_juego)])
+    def str(self):         
+        return self.titulo
