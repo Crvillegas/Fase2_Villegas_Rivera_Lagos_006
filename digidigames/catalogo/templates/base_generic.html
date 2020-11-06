@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-ES">
     <head>
-        <title>Digital Distribution Games</title>
+        {%block title%} <title>Digital Distribution Games</title>{%endblock%}
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -48,6 +48,59 @@
                   </form>
                 </div>
               </nav>
+              {% block content %}{% endblock %}
         </header>
+        <footer class="page-footer font-small blue" id= "cajaFooter">
+ 
+
+          <div class="container-fluid text-center text-md-left">
+        
+
+            <div class="row">
+        
+
+              <div class="col-md-6 mt-md-0 mt-3">
+
+                <a class= "logo" href="{%url 'index' %}" ><img src="{% static 'IMG/logo2.png' %}"></a>
+       
+        
+              </div>
+
+        
+              <hr class="clearfix w-100 d-md-none pb-3">
+        
+              <div class="col-md-3 mb-md-0 mb-3">
+        
+
+                <h5 class="text-uppercase" style="color: darkcyan;">Acerca de Nosotros</h5>
+        
+                <ul class="list-unstyled">
+                  <li>
+                    <a style="color: azure;" >Somos una distribuidora de juegos digitales confiable y segura, no lo dudes.
+                      ¿porque digital? Actualmente se ha sabido que la venta de juegos digitales lleva la delantera
+                      al ser de entrega inmediata y de facil acceso, por lo que nos hemos inclinado por la opción digital.
+       
+                    </a>
+                  </li>
+                  <li>
+                    <a href="{%url 'Contacto' %}">¿Quieres Contactarnos?</a>
+                  </li>
+                </ul>
+        
+              </div>
+
+        
+            </div>
+
+        
+          </div>
+
+        
+
+          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a class="colorfuente"  href="{%url 'index' %}"> Digital Distribution Games (DigiDiGames.net)</a>
+          </div>
+
+        
+        </footer>
 </html>
-{% block content %}{% endblock %}

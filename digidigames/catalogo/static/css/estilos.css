@@ -90,10 +90,14 @@ a:link{
     text-decoration-line: none;
 
 }
+.colorfuente{
+  color: azure;
+}
 
 a:hover{
     text-decoration-line: underline;
     color: rgb(255, 255, 255);
+
 }
 
 @media screen and (max-height: 1000px) {
@@ -143,7 +147,9 @@ a:hover{
   }
 
 
-
+label {
+  color: aliceblue;
+} 
 
 
 #cajaform{
@@ -296,5 +302,14 @@ a:hover{
 }
 
 
+.p {
+  color: white;
+}
 
+
+#cajaFooter {
+  background: #000000be;
+
+
+}
 

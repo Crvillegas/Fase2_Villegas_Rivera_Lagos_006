@@ -7,12 +7,12 @@
     <ul>
         {%for juego in juego_list%}
         <li>
-            <a href="{{juego.get_absolute_url}}">{{ juego.titulo }}</a> ({{juego.precio}})
+            <a href="{{juego.get_absolute_url}}">{{ juego.titulo }} ({{juego.precio}})</a>
         </li>
         {%endfor%}
         
     </ul>
     {%else%}    
-    <p>No hay juegos disponibles en la pagina de momento.</p>
+    <p style="color: darkred;">No hay juegos disponibles en la pagina de momento.</p>
     {%endif%}
 {%endblock%}

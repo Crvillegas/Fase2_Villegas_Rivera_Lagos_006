@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import juego
+from . models import Juego
 from django.views import generic
 
 #Importamos informacion para formularios 
@@ -8,15 +8,16 @@ from django.urls import reverse_lazy
 
 # Create your views here.
 def index(request) :
-    num_juego = juego.objects.all().count()
+    num_juego = Juego.objects.all().count()
 
     return render(
         request,
         'index.html',
         context={'num_juego':num_juego},
     )
+
 def Contacto(request) :
-    num_juego = juego.objects.all().count()
+    num_juego = Juego.objects.all().count()
 
     return render(
         request,
@@ -24,7 +25,7 @@ def Contacto(request) :
         context={'num_juego':num_juego},
     )
 def Steam(request) :
-    num_juego = juego.objects.all().count()
+    num_juego = Juego.objects.all().count()
 
     return render(
         request,
@@ -32,7 +33,7 @@ def Steam(request) :
         context={'num_juego':num_juego},
     )
 def Origin(request) :
-    num_juego = juego.objects.all().count()
+    num_juego = Juego.objects.all().count()
 
     return render(
         request,
@@ -40,7 +41,7 @@ def Origin(request) :
         context={'num_juego':num_juego},
     )
 def Pago(request) :
-    num_juego = juego.objects.all().count()
+    num_juego = Juego.objects.all().count()
 
     return render(
         request,
@@ -48,28 +49,26 @@ def Pago(request) :
         context={'num_juego':num_juego},
     )
 
+
+
+
 #crud
 
-
-
 class juegoListView (generic.ListView):
-    model = juego
+    model = Juego
     paginate_by = 10
 
-
-
-
 class juegoCreate(CreateView):
-    model = juego
+    model = Juego
     fields = '__all__'
 
 class juegoUpdate(UpdateView):
-    model = juego
-    fields = ['id_juego', 'titulo', 'descipcion', 'precio', 'plataforma_status']
+    model = Juego
+    fields = ['titulo', 'descipcion', 'precio',]
 
 class juegoDelete(DeleteView):
-    model = juego
+    model = Juego
     success_url = reverse_lazy ('index')
 
 class juegoDetailView(generic.DetailView):
-    model = juego
+    model = Juego

@@ -3,13 +3,14 @@ from django.urls import reverse  #Redirecciona una url de un libro al browser
 import uuid                      #se utiliza para definir atributos clave (pk)
 # Create your models here.
 
-class juego(models.Model):
+class Juego(models.Model):
     
-    id_juego=models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Atributo unico para este juego en particular')
+    id_juego=models.IntegerField(primary_key=True)
     titulo = models.CharField(max_length=200)
     descipcion= models.TextField(max_length=1000)
     precio=models.CharField(max_length=6)
-    plataforma_status=(
+
+    LOAN_PLATAFORMA=(
         ('S','Steam'),
         ('O','Origin'),
     )
@@ -17,7 +18,7 @@ class juego(models.Model):
 
     status = models.CharField(
         max_length=1,
-        choices=plataforma_status,
+        choices=LOAN_PLATAFORMA,
         blank=True,
         default='S',
         help_text='Plataforma del juego',
